@@ -1,23 +1,11 @@
 Summary:	A Better CD Encoder
 Name:		abcde
-Version:	-
-Release:	-
-Epoch:		-
-License:	- (enter GPL/LGPL/BSD/BSD-like/other license name here)
-Group:		-
+Version:	2.0.3
+Release:	1
+License:	GPL
+Group:		Applications
 Source0:	http://lly.org/~rcw/abcde/%{name}_%{version}.orig.tar.gz
-Source1:	-
-Patch0:		-
 URL:		http://lly.org/~rcw/abcde/page/
-BuildRequires:	-
-PreReq:		-
-Requires:	-
-Requires(pre,post):	-
-Requires(preun):	-
-Requires(postun):	-
-Provides:	-
-Obsoletes:	-
-Conflicts:	-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,52 +16,22 @@ command. It supports parallelization, SMP, HTTP proxies, customizable
 filename organization and munging, playlist generation, and remote
 distributed encoding via distmp3.
 
-
-%package subpackage
-Summary:	-
-Summary(pl):	-
-Group:		-
-
-%description subpackage
-
-%description subpackage -l pl
-
 %prep
-%setup -q -n %{name}-%{version}.orig -a 1
-%patch0 -p1
-
-%build
-aclocal
-%{__autoconf}
-autoheader
-%{__automake}
-%configure
-%{__make}
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_sysconfdir}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+install abcde cddb-tool $RPM_BUILD_ROOT%{_bindir}
+install *.1 $RPM_BUILD_ROOT%{_bindir}
+install abcde.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%pre
-
-%preun
-
-%post
-
-%postun
-
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog
+%doc README changelog TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
-
-%files subpackage
-%defattr(644,root,root,755)
-%doc extras/*.gz
-%{_datadir}/%{name}-ext
+%verify(not size md5 mtime) %config(noreplace) %{_sysconfdir}/abcde.conf
