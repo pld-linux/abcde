@@ -23,7 +23,7 @@ generation, and remote distributed encoding via distmp3.
 
 %description -l pl
 Abcde jest nak³adk± na takie programy jak cdparanoia, wget, cd-discid,
-id3 oraz Twój ulubiony kodek Ogg/Mp3 (standardowym kodekiem jest
+id3 oraz Twój ulubiony kodek Ogg/MP3 (standardowym kodekiem jest
 Oggenc). Abcde ¶ci±ga wszystkie ¶cie¿ki z kompaktu,  konwertuje je do
 odpowiedniego formatu, a nastêpnie dodaje do utworzonych plików tagi
 ID3 - wszystko za pomoc± jednej komendy. Skrypt umo¿liwia równoleg³±
