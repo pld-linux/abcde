@@ -1,7 +1,7 @@
 Summary:	A Better CD Encoder
 Summary(pl):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
-Version:	2.1.2
+Version:	2.1.3
 Release:	1
 License:	GPL v2+
 Group:		Applications
