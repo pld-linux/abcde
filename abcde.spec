@@ -13,6 +13,8 @@ License:	GPL
 Group:		Applications
 Source0:	http://lly.org/~rcw/abcde/%{name}_%{version}.orig.tar.gz
 URL:		http://lly.org/~rcw/abcde/page/
+Requires:	cd-discid >= 0.7
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_sysconfdir}}
 
 install abcde cddb-tool $RPM_BUILD_ROOT%{_bindir}
-install *.1 $RPM_BUILD_ROOT%{_bindir}
+install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install abcde.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
@@ -42,3 +44,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README changelog TODO
 %attr(755,root,root) %{_bindir}/*
 %verify(not size md5 mtime) %config(noreplace) %{_sysconfdir}/abcde.conf
+%{_mandir}/man1/*
