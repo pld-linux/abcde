@@ -1,12 +1,12 @@
 Summary:	A Better CD Encoder
 Summary(pl):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
-Version:	2.0.3
+Version:	2.1.0
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Applications
-Source0:	http://lly.org/~rcw/abcde/%{name}_%{version}.orig.tar.gz
-URL:		http://lly.org/~rcw/abcde/page/
+Source0:	http://www.hispalinux.es/~data/files/%{name}_%{version}.orig.tar.gz
+URL:		http://www.hispalinux.es/~data/abcde.php
 Requires:	cd-discid >= 0.7
 Requires:	wget >= 1.8.1
 BuildArch:	noarch
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README changelog TODO
+%doc README changelog TODO FAQ
 %attr(755,root,root) %{_bindir}/*
 %verify(not size md5 mtime) %config(noreplace) %{_sysconfdir}/abcde.conf
 %{_mandir}/man1/*
