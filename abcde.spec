@@ -1,3 +1,10 @@
+
+#
+# todo:
+# - minimum install requirements
+# - pl summaries and descriptions
+#
+
 Summary:	A Better CD Encoder
 Name:		abcde
 Version:	2.0.3
