@@ -1,12 +1,12 @@
 Summary:	A Better CD Encoder
 Summary(pl):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
-Version:	2.1.9
+Version:	2.1.10
 Release:	1
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.hispalinux.es/~data/files/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	94f2e86c52cdd648cfa0b9340808ab99
+# Source0-md5:	b8d2def3abe27a589b29952ceea401b0
 URL:		http://www.hispalinux.es/~data/abcde.php
 Requires:	cd-discid >= 0.7
 Requires:	wget >= 1.8.1
