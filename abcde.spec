@@ -1,10 +1,4 @@
 
-#
-# todo:
-# - minimum install requirements
-# - pl summaries and descriptions
-#
-
 Summary:	A Better CD Encoder
 Name:		abcde
 Version:	2.0.3
@@ -14,6 +8,7 @@ Group:		Applications
 Source0:	http://lly.org/~rcw/abcde/%{name}_%{version}.orig.tar.gz
 URL:		http://lly.org/~rcw/abcde/page/
 Requires:	cd-discid >= 0.7
+Requires:	wget >= 1.8.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,6 +19,15 @@ each track to Ogg/MP3, then comments or ID3-tags each file, all with one
 command. It supports parallelization, SMP, HTTP proxies, customizable
 filename organization and munging, playlist generation, and remote
 distributed encoding via distmp3.
+
+%description -l pl
+Abcde jest nak³adk± na takie programy jak cdparanoia, wget, cd-discid, id3
+oraz Twój ulubiony kodek Ogg/Mp3 (standardowym kodekiem jest Oggenc).
+Abcde ¶ci±ga wszystkie ¶cie¿ki z kompaktu,  konwertuje je do odpowiedniego
+formatu, a nastêpnie dodaje do utworzonych plików tagi ID3 - wszystko za
+pomoc± jednej komendy. Skrypt umo¿liwia równoleg³± pracê poszczególnych
+komponentów, wspiera SMP, proxy HTTP oraz zdalne kodowanie za pomoc±
+distmp3.
 
 %prep
 %setup -q
