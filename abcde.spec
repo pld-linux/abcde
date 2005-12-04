@@ -24,7 +24,7 @@ generation, and remote distributed encoding via distmp3.
 %description -l pl
 Abcde jest nak³adk± na takie programy jak cdparanoia, wget, cd-discid,
 id3 oraz Twój ulubiony kodek Ogg/MP3 (standardowym kodekiem jest
-Oggenc). Abcde ¶ci±ga wszystkie ¶cie¿ki z kompaktu,  konwertuje je do
+Oggenc). Abcde ¶ci±ga wszystkie ¶cie¿ki z kompaktu, konwertuje je do
 odpowiedniego formatu, a nastêpnie dodaje do utworzonych plików tagi
 ID3 - wszystko za pomoc± jednej komendy. Skrypt umo¿liwia równoleg³±
 pracê poszczególnych komponentów, wspiera SMP, proxy HTTP oraz zdalne
@@ -48,5 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README changelog TODO FAQ
 %attr(755,root,root) %{_bindir}/*
-%verify(not size md5 mtime) %config(noreplace) %{_sysconfdir}/abcde.conf
+%verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/abcde.conf
 %{_mandir}/man1/*
