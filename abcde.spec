@@ -1,5 +1,5 @@
 Summary:	A Better CD Encoder
-Summary(pl):	A Better CD Encoder - lepszy koder CD
+Summary(pl.UTF-8):   A Better CD Encoder - lepszy koder CD
 Name:		abcde
 Version:	2.3.3
 Release:	1
@@ -21,14 +21,14 @@ file, all with one command. It supports parallelization, SMP, HTTP
 proxies, customizable filename organization and munging, playlist
 generation, and remote distributed encoding via distmp3.
 
-%description -l pl
-Abcde jest nak³adk± na takie programy jak cdparanoia, wget, cd-discid,
-id3 oraz Twój ulubiony kodek Ogg/MP3 (standardowym kodekiem jest
-Oggenc). Abcde ¶ci±ga wszystkie ¶cie¿ki z kompaktu, konwertuje je do
-odpowiedniego formatu, a nastêpnie dodaje do utworzonych plików tagi
-ID3 - wszystko za pomoc± jednej komendy. Skrypt umo¿liwia równoleg³±
-pracê poszczególnych komponentów, wspiera SMP, proxy HTTP oraz zdalne
-kodowanie za pomoc± distmp3.
+%description -l pl.UTF-8
+Abcde jest nakÅ‚adkÄ… na takie programy jak cdparanoia, wget, cd-discid,
+id3 oraz TwÃ³j ulubiony kodek Ogg/MP3 (standardowym kodekiem jest
+Oggenc). Abcde Å›ciÄ…ga wszystkie Å›cieÅ¼ki z kompaktu, konwertuje je do
+odpowiedniego formatu, a nastÄ™pnie dodaje do utworzonych plikÃ³w tagi
+ID3 - wszystko za pomocÄ… jednej komendy. Skrypt umoÅ¼liwia rÃ³wnolegÅ‚Ä…
+pracÄ™ poszczegÃ³lnych komponentÃ³w, wspiera SMP, proxy HTTP oraz zdalne
+kodowanie za pomocÄ… distmp3.
 
 %prep
 %setup -q
