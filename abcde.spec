@@ -1,5 +1,5 @@
 Summary:	A Better CD Encoder
-Summary(pl.UTF-8):   A Better CD Encoder - lepszy koder CD
+Summary(pl.UTF-8):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
 Version:	2.3.3
 Release:	1
