@@ -2,7 +2,7 @@ Summary:	A Better CD Encoder
 Summary(pl.UTF-8):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
 Version:	2.3.3
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	http://www.hispalinux.es/~data/files/%{name}_%{version}.orig.tar.gz
