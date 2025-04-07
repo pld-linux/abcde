@@ -1,13 +1,13 @@
 Summary:	A Better CD Encoder
 Summary(pl.UTF-8):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
-Version:	2.3.3
-Release:	2
+Version:	2.9.3
+Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://www.hispalinux.es/~data/files/%{name}_%{version}.orig.tar.gz
-# Source0-md5:	94877d1e410ae420630b1048e82907d3
-URL:		http://www.hispalinux.es/~data/abcde.php
+Source0:	https://abcde.einval.com/download/%{name}-%{version}.tar.gz
+# Source0-md5:	24a6e89f0e04acb6111e6be913643b12
+URL:		https://abcde.einval.com/wiki/
 Requires:	cd-discid >= 0.7
 Requires:	wget >= 1.8.1
 BuildArch:	noarch
@@ -37,16 +37,19 @@ kodowanie za pomocą distmp3.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_sysconfdir}}
 
-install abcde cddb-tool $RPM_BUILD_ROOT%{_bindir}
-install *.1 $RPM_BUILD_ROOT%{_mandir}/man1
-install abcde.conf $RPM_BUILD_ROOT%{_sysconfdir}
+install abcde abcde-musicbrainz-tool cddb-tool $RPM_BUILD_ROOT%{_bindir}
+cp -p *.1 $RPM_BUILD_ROOT%{_mandir}/man1
+cp -p abcde.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README changelog TODO FAQ
-%attr(755,root,root) %{_bindir}/*
+%doc FAQ README changelog
+%attr(755,root,root) %{_bindir}/abcde
+%attr(755,root,root) %{_bindir}/abcde-musicbrainz-tool
+%attr(755,root,root) %{_bindir}/cddb-tool
 %verify(not md5 mtime size) %config(noreplace) %{_sysconfdir}/abcde.conf
-%{_mandir}/man1/*
+%{_mandir}/man1/abcde.1*
+%{_mandir}/man1/cddb-tool.1*
