@@ -2,12 +2,14 @@ Summary:	A Better CD Encoder
 Summary(pl.UTF-8):	A Better CD Encoder - lepszy koder CD
 Name:		abcde
 Version:	2.9.3
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications
 Source0:	https://abcde.einval.com/download/%{name}-%{version}.tar.gz
 # Source0-md5:	24a6e89f0e04acb6111e6be913643b12
 URL:		https://abcde.einval.com/wiki/
+BuildRequires:	rpm-perlprov
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	cd-discid >= 0.7
 Requires:	wget >= 1.8.1
 BuildArch:	noarch
